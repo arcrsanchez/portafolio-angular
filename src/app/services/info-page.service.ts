@@ -22,7 +22,6 @@ export class InfoPageService {
       .subscribe((resp: Infopage) => {
         this.cargada = true;
         this.info = resp;
-        console.log(this.info);
       });
   }
 
@@ -31,7 +30,6 @@ export class InfoPageService {
       .subscribe((resp: Team[]) => {
         this.cargada = true;
         this.team = resp;
-        console.log(this.team);
       });
   }
 
