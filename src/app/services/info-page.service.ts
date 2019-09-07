@@ -13,26 +13,26 @@ export class InfoPageService {
   team: Team[] = [];
 
   constructor(private http: HttpClient) {
-   this.cargarInfo();
-   this.cargarEquipo();
+    this.cargarInfo();
+    this.cargarEquipo();
   }
 
-  private cargarInfo(){
+  private cargarInfo() {
     this.http.get('assets/data/data-page.json')
-    .subscribe((resp: Infopage) => {
-      this.cargada = true;
-      this.info = resp;
-      console.log(resp);
-    });
+      .subscribe((resp: Infopage) => {
+        this.cargada = true;
+        this.info = resp;
+        console.log(this.info);
+      });
   }
 
-  private cargarEquipo(){
+  private cargarEquipo() {
     this.http.get('https://angular-html-53b77.firebaseio.com/equipo.json')
-    .subscribe((resp: Team[]) => {
-      this.cargada = true;
-      this.team = resp;
-      console.log(resp);
-    });
+      .subscribe((resp: Team[]) => {
+        this.cargada = true;
+        this.team = resp;
+        console.log(this.team);
+      });
   }
 
 }
