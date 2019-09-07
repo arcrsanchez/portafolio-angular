@@ -1,3 +1,4 @@
+import { Team } from './team.interface';
 export interface Infopage {
   title?: string;
   email?: string;
@@ -7,5 +8,5 @@ export interface Infopage {
   twitter?: string;
   instagram?: string;
   tumblr?: string;
-  team_work?: any[];
+  team_work?: Team[];
 }
